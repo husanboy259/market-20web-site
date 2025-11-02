@@ -12,13 +12,15 @@ const PRODUCT_DETAILS = {
   rating: 4.5,
   reviews: 328,
   category: "Electronics",
-  image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=600&fit=crop",
+  image:
+    "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=600&fit=crop",
   images: [
     "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=600&fit=crop",
     "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=600&h=600&fit=crop",
     "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&h=600&fit=crop",
   ],
-  description: "Experience premium sound quality with these wireless headphones. Featuring noise cancellation, 30-hour battery life, and comfortable padding for all-day wear.",
+  description:
+    "Experience premium sound quality with these wireless headphones. Featuring noise cancellation, 30-hour battery life, and comfortable padding for all-day wear.",
   features: [
     "Active Noise Cancellation",
     "30-hour battery life",
@@ -30,9 +32,9 @@ const PRODUCT_DETAILS = {
   specs: {
     "Driver Size": "40mm",
     "Frequency Response": "20Hz - 20kHz",
-    "Impedance": "32 Ohm",
-    "Weight": "250g",
-    "Warranty": "2 years",
+    Impedance: "32 Ohm",
+    Weight: "250g",
+    Warranty: "2 years",
   },
   stock: 45,
 };
@@ -43,7 +45,8 @@ const RELATED_PRODUCTS = [
     title: "Comfortable Running Shoes",
     price: 89.99,
     originalPrice: 149.99,
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
     rating: 4.8,
     reviews: 512,
     category: "Fashion",
@@ -53,7 +56,8 @@ const RELATED_PRODUCTS = [
     title: "Stylish Smartwatch",
     price: 199.99,
     originalPrice: 299.99,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
     rating: 4.6,
     reviews: 289,
     category: "Electronics",
@@ -63,7 +67,8 @@ const RELATED_PRODUCTS = [
     title: "Portable Bluetooth Speaker",
     price: 59.99,
     originalPrice: 99.99,
-    image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
     rating: 4.4,
     reviews: 401,
     category: "Electronics",
@@ -79,7 +84,7 @@ export default function ProductDetail() {
   const discount = Math.round(
     ((PRODUCT_DETAILS.originalPrice - PRODUCT_DETAILS.price) /
       PRODUCT_DETAILS.originalPrice) *
-      100
+      100,
   );
 
   return (
@@ -110,7 +115,11 @@ export default function ProductDetail() {
                     selectedImage === idx ? "border-primary" : "border-border"
                   }`}
                 >
-                  <img src={img} alt={`Product ${idx}`} className="w-full h-20 object-cover" />
+                  <img
+                    src={img}
+                    alt={`Product ${idx}`}
+                    className="w-full h-20 object-cover"
+                  />
                 </button>
               ))}
             </div>
@@ -159,14 +168,20 @@ export default function ProductDetail() {
                   </span>
                 )}
               </div>
-              <p className="text-green-600 text-sm font-medium">In Stock ({PRODUCT_DETAILS.stock})</p>
+              <p className="text-green-600 text-sm font-medium">
+                In Stock ({PRODUCT_DETAILS.stock})
+              </p>
             </div>
 
-            <p className="text-muted-foreground mb-8">{PRODUCT_DETAILS.description}</p>
+            <p className="text-muted-foreground mb-8">
+              {PRODUCT_DETAILS.description}
+            </p>
 
             {/* Quantity */}
             <div className="mb-8">
-              <label className="block text-sm font-semibold text-foreground mb-3">Quantity</label>
+              <label className="block text-sm font-semibold text-foreground mb-3">
+                Quantity
+              </label>
               <div className="flex items-center gap-2 w-fit">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -177,7 +192,9 @@ export default function ProductDetail() {
                 <input
                   type="number"
                   value={quantity}
-                  onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
+                  onChange={(e) =>
+                    setQuantity(Math.max(1, parseInt(e.target.value) || 1))
+                  }
                   className="w-16 px-3 py-2 border border-border rounded-lg text-center focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <button
@@ -198,7 +215,9 @@ export default function ProductDetail() {
                 onClick={() => setIsFavorite(!isFavorite)}
                 className="px-6 py-3 border border-border rounded-lg hover:bg-muted transition-colors"
               >
-                <Heart className={`w-5 h-5 ${isFavorite ? "fill-destructive text-destructive" : ""}`} />
+                <Heart
+                  className={`w-5 h-5 ${isFavorite ? "fill-destructive text-destructive" : ""}`}
+                />
               </button>
               <button className="px-6 py-3 border border-border rounded-lg hover:bg-muted transition-colors">
                 <Share2 className="w-5 h-5" />
@@ -209,15 +228,21 @@ export default function ProductDetail() {
             <div className="border-t border-border pt-8 space-y-4">
               <div className="flex items-center gap-3">
                 <Truck className="w-5 h-5 text-primary" />
-                <span className="text-sm text-foreground">Free delivery on orders over $50</span>
+                <span className="text-sm text-foreground">
+                  Free delivery on orders over $50
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <RotateCcw className="w-5 h-5 text-primary" />
-                <span className="text-sm text-foreground">Easy 30-day returns</span>
+                <span className="text-sm text-foreground">
+                  Easy 30-day returns
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <Shield className="w-5 h-5 text-primary" />
-                <span className="text-sm text-foreground">Secure checkout with SSL encryption</span>
+                <span className="text-sm text-foreground">
+                  Secure checkout with SSL encryption
+                </span>
               </div>
             </div>
           </div>
@@ -226,7 +251,9 @@ export default function ProductDetail() {
         {/* Features & Specs */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-lg border border-border p-8">
-            <h2 className="text-2xl font-bold text-foreground mb-6">Features</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-6">
+              Features
+            </h2>
             <ul className="space-y-3">
               {PRODUCT_DETAILS.features.map((feature, idx) => (
                 <li key={idx} className="flex items-start gap-3">
@@ -238,7 +265,9 @@ export default function ProductDetail() {
           </div>
 
           <div className="bg-white rounded-lg border border-border p-8">
-            <h2 className="text-2xl font-bold text-foreground mb-6">Specifications</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-6">
+              Specifications
+            </h2>
             <dl className="space-y-4">
               {Object.entries(PRODUCT_DETAILS.specs).map(([key, value]) => (
                 <div key={key} className="flex justify-between">
@@ -252,7 +281,9 @@ export default function ProductDetail() {
 
         {/* Related Products */}
         <div>
-          <h2 className="text-3xl font-bold text-foreground mb-8">Related Products</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8">
+            Related Products
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {RELATED_PRODUCTS.map((product) => (
               <ProductCard key={product.id} {...product} />

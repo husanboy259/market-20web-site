@@ -59,7 +59,9 @@ export function ProductCard({
           >
             <Heart
               className={`w-5 h-5 transition-colors ${
-                isFavorite ? "fill-destructive text-destructive" : "text-muted-foreground"
+                isFavorite
+                  ? "fill-destructive text-destructive"
+                  : "text-muted-foreground"
               }`}
             />
           </button>
@@ -80,7 +82,9 @@ export function ProductCard({
         {/* Content */}
         <div className="p-4 flex-1 flex flex-col justify-between">
           {/* Category */}
-          <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-2">{category}</p>
+          <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-2">
+            {category}
+          </p>
 
           {/* Title */}
           <h3 className="font-semibold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors">
@@ -106,7 +110,9 @@ export function ProductCard({
 
           {/* Price */}
           <div className="flex items-center gap-2">
-            <span className="text-lg font-bold text-primary">${price.toFixed(2)}</span>
+            <span className="text-lg font-bold text-primary">
+              ${price.toFixed(2)}
+            </span>
             {originalPrice && originalPrice > price && (
               <span className="text-sm text-muted-foreground line-through">
                 ${originalPrice.toFixed(2)}

@@ -6,9 +6,12 @@ export default function About() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary to-secondary text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About MarketHub</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            About MarketHub
+          </h1>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            We're on a mission to make online shopping accessible, reliable, and rewarding for everyone.
+            We're on a mission to make online shopping accessible, reliable, and
+            rewarding for everyone.
           </p>
         </div>
       </section>
@@ -19,25 +22,34 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <Target className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h2 className="text-2xl font-bold text-foreground mb-3">Our Mission</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-3">
+                Our Mission
+              </h2>
               <p className="text-muted-foreground">
-                To provide the best online shopping experience with quality products and exceptional customer service.
+                To provide the best online shopping experience with quality
+                products and exceptional customer service.
               </p>
             </div>
 
             <div className="text-center">
               <Heart className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h2 className="text-2xl font-bold text-foreground mb-3">Our Values</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-3">
+                Our Values
+              </h2>
               <p className="text-muted-foreground">
-                Customer satisfaction, transparency, quality, and innovation drive everything we do.
+                Customer satisfaction, transparency, quality, and innovation
+                drive everything we do.
               </p>
             </div>
 
             <div className="text-center">
               <Zap className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h2 className="text-2xl font-bold text-foreground mb-3">Our Promise</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-3">
+                Our Promise
+              </h2>
               <p className="text-muted-foreground">
-                Fast delivery, secure payments, and 30-day easy returns on all purchases.
+                Fast delivery, secure payments, and 30-day easy returns on all
+                purchases.
               </p>
             </div>
           </div>

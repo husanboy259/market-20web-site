@@ -13,7 +13,10 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 font-bold text-2xl text-primary">
+          <Link
+            to="/"
+            className="flex items-center gap-2 font-bold text-2xl text-primary"
+          >
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white">
               🛍️
             </div>
@@ -22,16 +25,28 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link to="/products" className="text-foreground hover:text-primary transition-colors">
+            <Link
+              to="/products"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Products
             </Link>
-            <Link to="/categories" className="text-foreground hover:text-primary transition-colors">
+            <Link
+              to="/categories"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Categories
             </Link>
-            <Link to="/about" className="text-foreground hover:text-primary transition-colors">
+            <Link
+              to="/about"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               About
             </Link>
-            <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
+            <Link
+              to="/contact"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Contact
             </Link>
           </nav>
@@ -44,7 +59,10 @@ export function Header() {
             <button className="p-2 hover:bg-muted rounded-lg transition-colors hidden sm:inline-flex">
               <User className="w-5 h-5 text-foreground" />
             </button>
-            <Link to="/cart" className="p-2 hover:bg-muted rounded-lg transition-colors">
+            <Link
+              to="/cart"
+              className="p-2 hover:bg-muted rounded-lg transition-colors"
+            >
               <ShoppingCart className="w-5 h-5 text-foreground" />
             </Link>
 

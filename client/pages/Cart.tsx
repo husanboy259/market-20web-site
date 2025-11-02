@@ -8,19 +8,24 @@ const CART_ITEMS = [
     title: "Premium Wireless Headphones",
     price: 79.99,
     quantity: 1,
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop",
   },
   {
     id: "2",
     title: "Comfortable Running Shoes",
     price: 89.99,
     quantity: 2,
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100&h=100&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100&h=100&fit=crop",
   },
 ];
 
 export default function Cart() {
-  const subtotal = CART_ITEMS.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const subtotal = CART_ITEMS.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0,
+  );
   const shipping = 10;
   const tax = subtotal * 0.1;
   const total = subtotal + shipping + tax;
@@ -30,13 +35,19 @@ export default function Cart() {
   return (
     <div className="min-h-screen bg-slate-50">
       <div className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold text-foreground mb-12">Shopping Cart</h1>
+        <h1 className="text-4xl font-bold text-foreground mb-12">
+          Shopping Cart
+        </h1>
 
         {isEmpty ? (
           <div className="bg-white rounded-lg border border-border p-12 text-center">
             <div className="mb-4 text-6xl">🛒</div>
-            <h2 className="text-2xl font-semibold text-foreground mb-2">Your cart is empty</h2>
-            <p className="text-muted-foreground mb-8">Start shopping to add items to your cart</p>
+            <h2 className="text-2xl font-semibold text-foreground mb-2">
+              Your cart is empty
+            </h2>
+            <p className="text-muted-foreground mb-8">
+              Start shopping to add items to your cart
+            </p>
             <Link to="/products">
               <Button size="lg">Continue Shopping</Button>
             </Link>
@@ -57,8 +68,12 @@ export default function Cart() {
                       className="w-24 h-24 object-cover rounded-lg"
                     />
                     <div className="flex-1">
-                      <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
-                      <p className="text-primary font-bold mb-4">${item.price.toFixed(2)}</p>
+                      <h3 className="font-semibold text-foreground mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-primary font-bold mb-4">
+                        ${item.price.toFixed(2)}
+                      </p>
                       <div className="flex items-center gap-3">
                         <button className="p-1 hover:bg-muted rounded transition-colors">
                           <Minus className="w-4 h-4 text-foreground" />
@@ -90,26 +105,36 @@ export default function Cart() {
             {/* Order Summary */}
             <div className="lg:col-span-1">
               <div className="bg-white rounded-lg border border-border p-6 sticky top-24">
-                <h2 className="text-xl font-semibold text-foreground mb-6">Order Summary</h2>
+                <h2 className="text-xl font-semibold text-foreground mb-6">
+                  Order Summary
+                </h2>
 
                 <div className="space-y-3 mb-6 pb-6 border-b border-border">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Subtotal</span>
-                    <span className="text-foreground font-medium">${subtotal.toFixed(2)}</span>
+                    <span className="text-foreground font-medium">
+                      ${subtotal.toFixed(2)}
+                    </span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Shipping</span>
-                    <span className="text-foreground font-medium">${shipping.toFixed(2)}</span>
+                    <span className="text-foreground font-medium">
+                      ${shipping.toFixed(2)}
+                    </span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Tax</span>
-                    <span className="text-foreground font-medium">${tax.toFixed(2)}</span>
+                    <span className="text-foreground font-medium">
+                      ${tax.toFixed(2)}
+                    </span>
                   </div>
                 </div>
 
                 <div className="flex justify-between mb-6">
                   <span className="font-semibold text-foreground">Total</span>
-                  <span className="text-2xl font-bold text-primary">${total.toFixed(2)}</span>
+                  <span className="text-2xl font-bold text-primary">
+                    ${total.toFixed(2)}
+                  </span>
                 </div>
 
                 <Button size="lg" className="w-full mb-3">
@@ -121,7 +146,8 @@ export default function Cart() {
 
                 <div className="mt-6 p-4 bg-blue-50 rounded-lg">
                   <p className="text-xs text-blue-700">
-                    ✓ Free shipping on orders over $50 | ✓ 30-day returns | ✓ Secure checkout
+                    ✓ Free shipping on orders over $50 | ✓ 30-day returns | ✓
+                    Secure checkout
                   </p>
                 </div>
               </div>

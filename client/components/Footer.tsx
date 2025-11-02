@@ -17,16 +17,26 @@ export function Footer() {
               <span>MarketHub</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Your trusted online marketplace for quality products and exceptional customer service.
+              Your trusted online marketplace for quality products and
+              exceptional customer service.
             </p>
             <div className="flex gap-4 mt-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="#"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="#"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a
+                href="#"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -37,22 +47,34 @@ export function Footer() {
             <h3 className="font-semibold text-foreground mb-4">Shop</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/products" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <Link
+                  to="/products"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                >
                   All Products
                 </Link>
               </li>
               <li>
-                <Link to="/categories" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <Link
+                  to="/categories"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                >
                   Categories
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <a
+                  href="#"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                >
                   Best Sellers
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <a
+                  href="#"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                >
                   New Arrivals
                 </a>
               </li>
@@ -64,22 +86,34 @@ export function Footer() {
             <h3 className="font-semibold text-foreground mb-4">Support</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <Link
+                  to="/contact"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                >
                   Contact Us
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <a
+                  href="#"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                >
                   FAQ
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <a
+                  href="#"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                >
                   Shipping Info
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <a
+                  href="#"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                >
                   Returns
                 </a>
               </li>
@@ -89,7 +123,9 @@ export function Footer() {
           {/* Newsletter */}
           <div>
             <h3 className="font-semibold text-foreground mb-4">Newsletter</h3>
-            <p className="text-muted-foreground text-sm mb-4">Subscribe to get special offers and updates!</p>
+            <p className="text-muted-foreground text-sm mb-4">
+              Subscribe to get special offers and updates!
+            </p>
             <div className="flex gap-2">
               <input
                 type="email"
@@ -109,13 +145,22 @@ export function Footer() {
             &copy; {currentYear} MarketHub. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a
+              href="#"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               Privacy Policy
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a
+              href="#"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               Terms of Service
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a
+              href="#"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               Cookie Policy
             </a>
           </div>

@@ -50,11 +50,10 @@ const App = () => (
   </QueryClientProvider>
 );
 
-let root: any;
 const rootElement = document.getElementById("root");
 if (rootElement) {
-  if (!root) {
-    root = createRoot(rootElement);
-  }
-  root.render(<App />);
+  const appRoot =
+    (window as any).__APP_ROOT__ || createRoot(rootElement);
+  (window as any).__APP_ROOT__ = appRoot;
+  appRoot.render(<App />);
 }
